@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.timer-controls {
+  margin: 2rem 1rem;
+  display: flex;
+}
+@media (max-width: 375px) {
+  .timer-controls {
+    flex-direction: column;
+  }
+  .timer-controls > div {
+    margin: 0.5rem;
+  }
+}
+
+#break-label,
+#session-label {
+  text-align: center;
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.controls button {
+  margin: 1rem;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  background: #62929a66;
+  cursor: pointer;
+}
+.controls button:hover {
+  background: #62929a99;
+}
+.controls button:active {
+  border: 2px;
+  background: #62929a;
+  color: #efecec;
+}
+
+#reset {
+  background-color: #0a93e85e;
+  color: #efecec;
+}
+#reset:hover {
+  background-color: #0a93e899;
+}
+#reset:active {
+  background-color: #0a93e8;
+  color: #efecec;
+}
+
+#start_stop {
+  background: #55f0bc63;
+  color: #efecec;
+}
+#start_stop:hover {
+  background: #55f0bc99;
+}
+#start_stop:active {
+  background: #55f0bc;
+}
+#start_stop.playing {
+  background: rgba(255, 84, 84, 0.84);
+}
+#start_stop.playing:hover {
+  background: #f8606099;
+}
+#start_stop.playing:active {
+  background: #f86060;
+}
+
+.timer {
+  text-align: center;
+  padding: 3rem;
+  border-radius: 50%;
+  min-height: 10rem;
+  width: 18rem;
+  align-self: center;
+  background: #6a93aa;
+  color: #efecec;
+  filter: drop-shadow(5px 10px 10px rgba(32, 39, 141, 0.4));
+}
+.timer #time-left {
+  font-size: 4rem;
+}
