@@ -1,7 +1,7 @@
 {
-  "name": "random-quote-generator",
+  "name": "pomodoro-clock",
   "version": "0.1.0",
-  "homepage": "https://isaacsokari.github.io/random-quote-generator",
+  "homepage": "https://isaacsokari.github.io/pomodoro-clock",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
