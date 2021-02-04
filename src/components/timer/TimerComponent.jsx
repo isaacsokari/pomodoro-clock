@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import './TimerComponent.css';
 
 const Timer = ({
   breakLength,
@@ -11,20 +13,20 @@ const Timer = ({
   setIsTimerRunning,
   isSession,
   setIsSession,
-  timeLeft
+  timeLeft,
 }) => {
   const timeLeftRef = React.useRef(null);
   const intervalId = React.useRef(null);
   const timerLabelRef = React.useRef(null);
 
   const playBeep = () => {
-    const audio = document.getElementById("beep");
+    const audio = document.getElementById('beep');
     audio.currentTime = 0;
     audio.play();
   };
 
   const initializeTimer = () => {
-    const audio = document.getElementById("beep");
+    const audio = document.getElementById('beep');
     audio.pause();
     audio.currentTime = 0;
     clearInterval(intervalId.current);
@@ -51,11 +53,11 @@ const Timer = ({
           clearInterval(intervalId.current);
           playBeep();
           // change session
-          timerLabelRef.current.innerText === "Session"
+          timerLabelRef.current.innerText === 'Session'
             ? setIsSession(false)
             : setIsSession(true);
           timeLeft.current =
-            timerLabelRef.current.innerText === "Session"
+            timerLabelRef.current.innerText === 'Session'
               ? sessionLength * 60 + 1
               : breakLength * 60 + 1;
           startAndStopTimer();
@@ -71,8 +73,8 @@ const Timer = ({
     let timeInSeconds = Math.floor(numberOfSeconds % 60);
     let timeInMinutes = Math.floor(numberOfSeconds / 60);
 
-    return `${timeInMinutes < 10 ? "0" + timeInMinutes : timeInMinutes}:${
-      timeInSeconds < 10 ? "0" + timeInSeconds : timeInSeconds
+    return `${timeInMinutes < 10 ? '0' + timeInMinutes : timeInMinutes}:${
+      timeInSeconds < 10 ? '0' + timeInSeconds : timeInSeconds
     }`;
   };
 
@@ -88,8 +90,11 @@ const Timer = ({
         </h2>
 
         <div className="controls">
-          <button id="start_stop" onClick={startAndStopTimer} className={`${isTimerRunning ? 'playing' : null}`}>
-            <i className={`fa fa-${isTimerRunning? 'pause' : 'play'}`} />
+          <button
+            id="start_stop"
+            onClick={startAndStopTimer}
+            className={`${isTimerRunning ? 'playing' : null}`}>
+            <i className={`fa fa-${isTimerRunning ? 'pause' : 'play'}`} />
           </button>
 
           <button id="reset" onClick={initializeTimer}>
@@ -100,6 +105,5 @@ const Timer = ({
     </>
   );
 };
-
 
 export default Timer;

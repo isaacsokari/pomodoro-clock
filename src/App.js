@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import TimerSetupComponent from './components/TimerSetupComponent';
-import Timer from './components/TimerComponent';
+import TimerSetupComponent from './components/timer-setup/TimerSetupComponent';
+import Timer from './components/timer/TimerComponent';
 
 import './App.css';
   

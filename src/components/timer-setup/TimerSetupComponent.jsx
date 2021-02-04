@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './TimerSetupComponent.css'
+
 const TimerSetupComponent = ({
   time,
   setTime,
