@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const TimerSetupComponent = ({
   time,
@@ -7,24 +7,23 @@ const TimerSetupComponent = ({
   type,
   prefix,
   isTimerRunning,
-  timeLeft
+  timeLeft,
 }) => {
   React.useEffect(() => {
-    if (prefix === "session") {
+    if (prefix === 'session') {
       timeLeft.current = time * 60;
     }
     // eslint-disable-next-line
   }, [time]);
 
   return (
-    <div className='timer-setup'>
-      <div id={`${prefix}-label`}>{label}</div>
+    <div className="timer-setup">
+      <h2 id={`${prefix}-label`}>{label}</h2>
       <div className="controls">
         <button
           id={`${prefix}-decrement`}
           onClick={() => setTime(time - 1 > 0 ? time - 1 : 1)}
-          disabled={isTimerRunning}
-        >
+          disabled={isTimerRunning}>
           <i class="fa fa-minus" />
         </button>
         <h3 id={`${prefix}-length`}>{time}</h3>
@@ -33,8 +32,7 @@ const TimerSetupComponent = ({
           onClick={() => {
             setTime(time < 60 ? time + 1 : 60);
           }}
-          disabled={isTimerRunning}
-        >
+          disabled={isTimerRunning}>
           <i class="fa fa-plus" />
         </button>
       </div>

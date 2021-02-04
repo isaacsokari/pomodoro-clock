@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   min-height: 100vh;
   width: 100vw;
   overflow-x: hidden;
@@ -22,29 +22,33 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
 }
 
 h1 {
   text-align: center;
+  font-size: 3rem;
+  color: #2f4f4f;
+}
+
+.timer-setup {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 2px solid #2f4f4f;
+  background-color: #f0fff0;
 }
 
 .timer-controls {
   margin: 2rem 1rem;
   display: flex;
 }
-@media (max-width: 375px) {
-  .timer-controls {
-    flex-direction: column;
-  }
-  .timer-controls > div {
-    margin: 0.5rem;
-  }
-}
 
 #break-label,
 #session-label {
   text-align: center;
   font-weight: 600;
+  color: #2f4f4f;
 }
 
 .controls {
@@ -52,6 +56,7 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+
 .controls button {
   margin: 1rem;
   padding: 0.5rem;
@@ -60,24 +65,25 @@ h1 {
   border-radius: 50%;
   height: 3rem;
   width: 3rem;
-  background: #62929a66;
+  background: #2f4f4f;
+  color: #fefefe;
   cursor: pointer;
 }
 .controls button:hover {
-  background: #62929a99;
+  background: #2f4f4f99;
 }
 .controls button:active {
   border: 2px;
-  background: #62929a;
+  background: #2f4f4f;
   color: #efecec;
 }
 
 #reset {
-  background-color: #0a93e85e;
+  background-color: #0a93e899;
   color: #efecec;
 }
 #reset:hover {
-  background-color: #0a93e899;
+  background-color: #0a93e8dd;
 }
 #reset:active {
   background-color: #0a93e8;
@@ -85,20 +91,20 @@ h1 {
 }
 
 #start_stop {
-  background: #55f0bc63;
+  background: #55f0bc99;
   color: #efecec;
 }
 #start_stop:hover {
-  background: #55f0bc99;
+  background: #55f0bcdd;
 }
 #start_stop:active {
   background: #55f0bc;
 }
 #start_stop.playing {
-  background: rgba(255, 84, 84, 0.84);
+  background: #ff545499;
 }
 #start_stop.playing:hover {
-  background: #f8606099;
+  background: #f86060dd;
 }
 #start_stop.playing:active {
   background: #f86060;
@@ -111,10 +117,22 @@ h1 {
   min-height: 10rem;
   width: 18rem;
   align-self: center;
-  background: #6a93aa;
-  color: #efecec;
-  filter: drop-shadow(5px 10px 10px rgba(32, 39, 141, 0.4));
+  background: #2f4f4f;
+  color: #fefefe;
+  filter: drop-shadow(0px 1px 2px #20278d66);
 }
 .timer #time-left {
   font-size: 4rem;
+}
+
+@media (max-width: 592px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 525px) {
+  .timer-controls {
+    flex-direction: column;
+  }
 }
