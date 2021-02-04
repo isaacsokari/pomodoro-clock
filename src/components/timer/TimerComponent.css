@@ -1,0 +1,46 @@
+#reset {
+  background-color: #0a93e899;
+  color: #efecec;
+}
+#reset:hover {
+  background-color: #0a93e8dd;
+}
+#reset:active {
+  background-color: #0a93e8;
+  color: #efecec;
+}
+
+#start_stop {
+  background: #55f0bc99;
+  color: #efecec;
+}
+#start_stop:hover {
+  background: #55f0bcdd;
+}
+#start_stop:active {
+  background: #55f0bc;
+}
+#start_stop.playing {
+  background: #ff545499;
+}
+#start_stop.playing:hover {
+  background: #f86060dd;
+}
+#start_stop.playing:active {
+  background: #f86060;
+}
+
+.timer {
+  text-align: center;
+  padding: 3rem;
+  border-radius: 50%;
+  min-height: 10rem;
+  width: 18rem;
+  align-self: center;
+  background: #2f4f4f;
+  color: #fefefe;
+  filter: drop-shadow(0px 1px 2px #20278d66);
+}
+.timer #time-left {
+  font-size: 4rem;
+}

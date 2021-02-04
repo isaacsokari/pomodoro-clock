@@ -1,0 +1,41 @@
+.timer-setup {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 2px solid #2f4f4f;
+  background-color: #f0fff0;
+}
+
+#break-label,
+#session-label {
+  text-align: center;
+  font-weight: 600;
+  color: #2f4f4f;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls button {
+  margin: 1rem;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  background: #2f4f4f;
+  color: #fefefe;
+  cursor: pointer;
+}
+.controls button:hover {
+  background: #2f4f4f99;
+}
+.controls button:active {
+  border: 2px;
+  background: #2f4f4f;
+  color: #efecec;
+}
